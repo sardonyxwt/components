@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Example Component Test Snapshot (Example component default) 1`] = `"<div class=\\"sc-AxjAm fPfvhw\\">Hello World!</div>"`;
+
+exports[`Example Component Test Snapshot (Example component with useReversColor) 1`] = `"<div class=\\"sc-AxjAm iLNCPx\\">Hello World!</div>"`;

@@ -8,16 +8,30 @@ export function createSnapshot<T>(element: React.ReactElement<T>): void {
     expect(component.html()).toMatchSnapshot();
 }
 
-export function createSnapshotTest<T>(description: string, element: React.ReactElement<T>): void {
+export function createSnapshotTest<T>(
+    description: string,
+    element: React.ReactElement<T>,
+): void {
     it(`Snapshot (${description})`, () => {
-        const renderedElement = React.createElement(ThemeProvider, { theme: defaultTheme.dark }, element);
+        const renderedElement = React.createElement(
+            ThemeProvider,
+            { theme: defaultTheme.dark },
+            element,
+        );
         createSnapshot(renderedElement);
     });
 }
 
-export function createRenderTest<T>(description: string, element: React.ReactElement<T>): void {
+export function createRenderTest<T>(
+    description: string,
+    element: React.ReactElement<T>,
+): void {
     it(`Render (${description})`, () => {
-        const renderedElement = React.createElement(ThemeProvider, { theme: defaultTheme.dark }, element);
+        const renderedElement = React.createElement(
+            ThemeProvider,
+            { theme: defaultTheme.dark },
+            element,
+        );
         const component = Enzyme.mount(renderedElement);
         expect(component).toBeDefined();
     });

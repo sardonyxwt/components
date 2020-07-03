@@ -8,5 +8,8 @@ export default {
 };
 
 export const example = (): React.ReactNode => (
-    <Example object={text('object', 'Storybook')} useReversColor={boolean('useReversColor', false)} />
+    <Example
+        object={text('object', 'Storybook')}
+        useReversColor={boolean('useReversColor', false)}
+    />
 );

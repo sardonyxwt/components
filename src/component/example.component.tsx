@@ -7,7 +7,11 @@ export type ExampleProps = {
 };
 
 export const Example: React.FC<ExampleProps> = (props) => {
-    return <ExampleWrapper useReversColor={props.useReversColor}>Hello {props.object}!</ExampleWrapper>;
+    return (
+        <ExampleWrapper useReversColor={props.useReversColor}>
+            Hello {props.object}!
+        </ExampleWrapper>
+    );
 };
 
 Example.defaultProps = {

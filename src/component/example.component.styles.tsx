@@ -5,7 +5,8 @@ export type ExampleWrapperProps = {
 };
 
 export const ExampleWrapper = styled.div<ExampleWrapperProps>`
-    color: ${({ theme, useReversColor }) => (useReversColor ? theme.palette.main : theme.palette.accent)};
+    color: ${({ theme, useReversColor }) =>
+        useReversColor ? theme.palette.main : theme.palette.accent};
 `;
 
 ExampleWrapper.displayName = 'ExampleWrapper';

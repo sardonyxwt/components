@@ -15,13 +15,23 @@ export function* loremIpsumGenerator(
     }
 }
 
-export function generateLoremIpsum(type: 'word' | 'sentence' | 'paragraph', count = INFINITE_FLAG): string[] {
+export function generateLoremIpsum(
+    type: 'word' | 'sentence' | 'paragraph',
+    count = INFINITE_FLAG,
+): string[] {
     return Array.from(loremIpsumGenerator(type, count));
 }
 
-export function* sourceListGenerator<T = string>(sources: T[], count = INFINITE_FLAG): Generator<T> {
+export function* sourceListGenerator<T = string>(
+    sources: T[],
+    count = INFINITE_FLAG,
+): Generator<T> {
     const initIndex = Math.floor(Math.random() * sources.length);
-    for (let i = 0, currentSourceIndex = initIndex; i < count || count === INFINITE_FLAG; i++, currentSourceIndex++) {
+    for (
+        let i = 0, currentSourceIndex = initIndex;
+        i < count || count === INFINITE_FLAG;
+        i++, currentSourceIndex++
+    ) {
         if (currentSourceIndex >= sources.length) {
             currentSourceIndex = 0;
         }
@@ -33,6 +43,9 @@ export function generateSource(sources: string[]): string {
     return sourceListGenerator(sources).next().value as string;
 }
 
-export function generateSourceList(sources: string[], count = INFINITE_FLAG): string[] {
+export function generateSourceList(
+    sources: string[],
+    count = INFINITE_FLAG,
+): string[] {
     return Array.from(sourceListGenerator(sources, count));
 }

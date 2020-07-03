@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+const pkg = require('./package.json');
 const tsconfig = require('./tsconfig.json');
-const moduleNameMapper = require('tsconfig-paths-jest')(tsconfig);
+const tsconfigPaths = require('tsconfig-paths-jest');
 
 module.exports = {
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
@@ -10,7 +11,7 @@ module.exports = {
     },
     setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
     moduleNameMapper: {
-        ...moduleNameMapper,
+        ...(tsconfig.compilerOptions.paths ? tsconfigPaths(tsconfig) : {}),
     },
     snapshotSerializers: ['enzyme-to-json/serializer'],
     reporters: [
@@ -18,7 +19,7 @@ module.exports = {
         [
             './node_modules/jest-html-reporter',
             {
-                pageTitle: 'Webapp Test Report',
+                pageTitle: `${pkg.name}-${pkg.version}`,
                 outputPath: './report/test-report.html',
                 includeFailureMsg: true,
                 includeConsoleLog: true,

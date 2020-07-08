@@ -1,47 +1,11 @@
-export const AVATAR_IMAGES = [
-    'storybook/public/img/avatar/avatar-1.jpg',
-    'storybook/public/img/avatar/avatar-2.jpg',
-    'storybook/public/img/avatar/avatar-3.jpg',
-    'storybook/public/img/avatar/avatar-4.jpg',
-    'storybook/public/img/avatar/avatar-5.jpg',
-    'storybook/public/img/avatar/avatar-6.jpg',
-    'storybook/public/img/avatar/avatar-7.jpg',
-    'storybook/public/img/avatar/avatar-8.jpg',
-    'storybook/public/img/avatar/avatar-9.jpg',
-    'storybook/public/img/avatar/avatar-10.jpg',
-    'storybook/public/img/avatar/avatar-11.jpg',
-    'storybook/public/img/avatar/avatar-12.jpg',
-    'storybook/public/img/avatar/avatar-13.jpg',
-    'storybook/public/img/avatar/avatar-14.jpg',
-    'storybook/public/img/avatar/avatar-15.jpg',
-    'storybook/public/img/avatar/avatar-16.jpg',
-    'storybook/public/img/avatar/avatar-17.jpg',
-    'storybook/public/img/avatar/avatar-18.jpg',
-    'storybook/public/img/avatar/avatar-19.jpg',
-    'storybook/public/img/avatar/avatar-20.jpg',
-    'storybook/public/img/avatar/avatar-21.jpg',
-    'storybook/public/img/avatar/avatar-22.jpg',
-    'storybook/public/img/avatar/avatar-23.jpg',
-    'storybook/public/img/avatar/avatar-24.jpg',
-    'storybook/public/img/avatar/avatar-25.jpg',
-    'storybook/public/img/avatar/avatar-26.jpg',
-    'storybook/public/img/avatar/avatar-27.jpg',
-    'storybook/public/img/avatar/avatar-28.jpg',
-    'storybook/public/img/avatar/avatar-29.jpg',
-    'storybook/public/img/avatar/avatar-30.jpg',
-];
+import {
+    buildAvatarPaths,
+    buildImagePaths,
+    buildVideoPaths,
+} from '@sardonyxwt/resources';
 
-export const IMAGES_SOURCES = [
-    'storybook/public/img/1.jpg',
-    'storybook/public/img/2.jpg',
-    'storybook/public/img/3.jpg',
-    'storybook/public/img/4.jpg',
-    'storybook/public/img/5.jpg',
-    'storybook/public/img/6.jpg',
-    'storybook/public/img/7.jpg',
-    'storybook/public/img/8.jpg',
-    'storybook/public/img/9.jpg',
-    'storybook/public/img/10.jpg',
-];
+export const AVATAR_IMAGES = buildAvatarPaths();
 
-export const VIDEOS_SOURCES = [];
+export const IMAGES_SOURCES = buildImagePaths();
+
+export const VIDEOS_SOURCES = buildVideoPaths();

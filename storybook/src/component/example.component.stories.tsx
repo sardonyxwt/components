@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Example } from '@source';
+import React from 'react';
 import { boolean, text } from '@storybook/addon-knobs';
+import { Example } from '@source';
 
 export default {
     title: 'Example',

@@ -1,6 +1,6 @@
 {
     "name": "@sardonyxwt/components",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Components",
     "main": "lib/components.cjs.js",
     "module": "lib/components.esm.js",
@@ -37,12 +37,18 @@
         "deploy": "npm run lint && npm run build && npm publish --access public"
     },
     "dependencies": {
+        "@sardonyxwt/ligui": "^16.3.1",
+        "body-scroll-lock": "^3.0.3",
+        "moment": "^2.27.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
+        "react-transition-group": "^4.4.1",
         "styled-components": "^5.1.1"
     },
     "devDependencies": {
-        "@sardonyxwt/resources": "0.0.3",
+        "@rollup/plugin-commonjs": "13.0.0",
+        "@rollup/plugin-node-resolve": "8.1.0",
+        "@sardonyxwt/resources": "0.0.4",
         "@storybook/addon-actions": "6.0.0-beta.38",
         "@storybook/addon-docs": "6.0.0-beta.38",
         "@storybook/addon-knobs": "6.0.0-beta.38",
@@ -52,12 +58,14 @@
         "@storybook/cli": "6.0.0-beta.38",
         "@storybook/react": "6.0.0-beta.38",
         "@storybook/theming": "6.0.0-beta.38",
+        "@types/body-scroll-lock": "2.6.1",
         "@types/enzyme": "3.10.5",
         "@types/faker": "4.1.12",
         "@types/jest": "26.0.3",
         "@types/node": "14.0.14",
         "@types/react": "16.9.41",
         "@types/react-dom": "16.9.8",
+        "@types/react-transition-group": "^4.4.0",
         "@types/rollup-plugin-visualizer": "2.6.0",
         "@types/styled-components": "5.1.0",
         "@typescript-eslint/eslint-plugin": "3.5.0",

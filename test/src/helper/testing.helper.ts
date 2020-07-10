@@ -1,5 +1,5 @@
-import * as React from 'react';
-import * as Enzyme from 'enzyme';
+import React from 'react';
+import Enzyme from 'enzyme';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from '@source/style/theme/default.theme';
 

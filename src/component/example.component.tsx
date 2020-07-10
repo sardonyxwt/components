@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React from 'react';
+import { Text } from '@source/component/text.component';
 import { ExampleWrapper } from '@source/component/example.component.styles';
 
 export type ExampleProps = {
@@ -9,7 +10,7 @@ export type ExampleProps = {
 export const Example: React.FC<ExampleProps> = (props) => {
     return (
         <ExampleWrapper useReversColor={props.useReversColor}>
-            Hello {props.object}!
+            <Text>Hello {props.object}!</Text>
         </ExampleWrapper>
     );
 };
